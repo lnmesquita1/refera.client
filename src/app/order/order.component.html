@@ -4,8 +4,8 @@
 		<button pButton (click)="createNewOrderActionButton()" type="button" class="create-button" label="Create new order"></button>
 	</div>
 
-	<p-table [value]="listOrders">
-		<ng-template pTemplate="header">
+	<p-table [responsive]="true" [value]="listOrders" styleClass="p-datatable-responsive-demo">
+		<ng-template pTemplate="header" let-columns>
 			<tr>
 				<th pSortableColumn="id">ID<p-sortIcon field="id"></p-sortIcon></th>
 				<th pSortableColumn="category.name">Category<p-sortIcon field="category.name"></p-sortIcon></th>
@@ -16,15 +16,15 @@
 				<th pSortableColumn="deadline">Deadline<p-sortIcon field="deadline"></p-sortIcon></th>
 			</tr>
 		</ng-template>
-		<ng-template pTemplate="body" let-order>
+		<ng-template pTemplate="body" let-order let-columns="columns">
 			<tr (click)="showModalDialog(order)" class="order-row">
-				<td>{{order.id}}</td>
-				<td>{{order.category.name}}</td>
-				<td>{{order.name}}</td>
-				<td>{{order.celPhone}}</td>
-				<td>{{order.agency}}</td>
-				<td>{{order.company}}</td>
-				<td>{{order.deadline | date: 'dd/MM/yyyy'}}</td>
+				<td><span class="p-column-title">ID</span>{{order.id}}</td>
+				<td><span class="p-column-title">Category</span>{{order.category.name}}</td>
+				<td><span class="p-column-title">Name</span>{{order.name}}</td>
+				<td><span class="p-column-title">Phone</span>{{order.celPhone}}</td>
+				<td><span class="p-column-title">Agency</span>{{order.agency}}</td>
+				<td><span class="p-column-title">Company</span>{{order.company}}</td>
+				<td><span class="p-column-title">Deadline</span>{{order.deadline | date: 'dd/MM/yyyy'}}</td>
 			</tr>
 		</ng-template>
 	</p-table>
