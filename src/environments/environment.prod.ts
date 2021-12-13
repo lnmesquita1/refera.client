@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'https://refera-server.herokuapp.com/'
+  baseUrl: 'https://refera-server.herokuapp.com'
 };
