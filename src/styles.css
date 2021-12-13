@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    padding: 2rem;
+}
+
+.p-dropdown, .p-calendar {
+    width: 100% !important;
+}
+
+.input-calendar {
+    appearance: auto
+}
