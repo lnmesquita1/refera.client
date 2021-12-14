@@ -1,10 +1,36 @@
-# ReferaClient
+# Refera Client
 
+This is the front end to manage maintanence orders from Refera. If you want to check this project running in production, just [click here](https://lnmesquita1.github.io/refera.client/).
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.13.
 
-## Development server
+Check also the [back-end project](https://github.com/lnmesquita1/refera.server).
+## Run Locally
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Clone the project
+
+```bash
+  git clone https://github.com/lnmesquita1/refera.client.git
+```
+
+Go to the project directory where you cloned.
+
+```bash
+  cd refera.client
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  ng serve
+```
+
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -21,6 +47,11 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## What we could improve
+
+- We could implement a lazy loading and paginator on the table of orders.
+- Give the possibility to delete an order by clicking on delete button inside the row.
 
 ## Further help
 
